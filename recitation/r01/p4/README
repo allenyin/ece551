@@ -1,0 +1,20 @@
+Write an algorithm, which takes one positive number (N) as a parameter,
+and prints a V shape from *s, such that the resulting V
+is N stars tall, with the sides of the V being at 45 degree angles.
+
+For example, given the input of N=3, your algorithm should print
+
+*   *
+ * *
+  *
+
+Given the input of N=5, your algorithm should print
+
+
+*       *
+ *     *
+  *   *
+   * *
+    *
+
+

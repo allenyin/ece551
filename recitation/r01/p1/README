@@ -1,0 +1,39 @@
+Recitation 1: Problem 1
+----------------------
+
+ 1. Create a file "answer.txt".
+ 2. Execute the following code by hand 
+   (as we do in the lecture videos), and write
+   the output in your "answer.txt" file
+
+//start of code
+int main(void) {
+   for (int i = 3; i <= 5; i++) {
+      for (int j = 2; j <= 4; j++) {
+        if (i % j == 0) {
+          printf("%d is a multiple of %d\n",i,j);
+        }
+      }
+    }
+  return 0;
+}
+//end of code
+ 3. Check your work in part 2 by
+    (a) Run the provided program, called test (which was compiled from this code),
+        and redirect the output to the file  test.out:
+            ./test > test.out
+    (b) Use the diff command to compare the contents of test.out with
+        the contents of your answer.txt file
+           diff test.out answer.txt
+        Note that if diff prints nothing, the files are the same.
+        If there are differences, it will print them out with 
+        < and > signs to indicate which file the differing lines are from
+    (c) If your answer.txt file is no correct, retry the problem 
+        and/or ask for help.  Repeat 2 and 3 until it is correct.
+
+ 4. Use svn add and svn commit to submit your answer.txt into subversion
+
+
+ 
+
+

@@ -1,0 +1,55 @@
+Recitation 1: Problem 1
+----------------------
+
+ 1. Create a file "answer.txt".
+ 2. Execute the following code by hand 
+   (as we do in the lecture videos), and write
+   the output in your "answer.txt" file
+
+//start of code
+int f2c(int x) {
+  x = x - 32;
+  return x * 5 / 9;
+}
+
+int main(void) {
+  for (int i = 0; i < 130; i += 25) {
+    int c = f2c(i);
+    printf("%d F is %d C", i, c);
+    if ( i < 30 ){
+      printf(" (very cold)\n");
+    }
+    else if (i < 60) {
+      printf(" (chilly)\n");
+    }
+    else if (i < 80){
+      printf(" (very nice)\n");
+    }
+    else  {
+      printf(" (hot)\n");
+    }
+  }
+
+  return 0;
+}
+
+//end of code
+ 3. Check your work in part 2 by
+    (a) Run the provided program, called test (which was compiled from this code),
+        and redirect the output to the file  test.out:
+            ./test > test.out
+    (b) Use the diff command to compare the contents of test.out with
+        the contents of your answer.txt file
+           diff test.out answer.txt
+        Note that if diff prints nothing, the files are the same.
+        If there are differences, it will print them out with 
+        < and > signs to indicate which file the differing lines are from
+    (c) If your answer.txt file is no correct, retry the problem 
+        and/or ask for help.  Repeat 2 and 3 until it is correct.
+
+ 4. Use svn add and svn commit to submit your answer.txt into subversion
+
+
+ 
+
+
