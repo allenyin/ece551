@@ -1,0 +1,11 @@
+# no object/compile files
+^.[oa]
+
+# no swp files
+*~
+
+# no svn files
+.svn
+
+# no unix tutorial files
+unix-tutorial/

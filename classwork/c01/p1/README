@@ -1,0 +1,80 @@
+Classwork 1: Problem 1
+----------------------
+
+ 1. Create a file "answer.txt".
+ 2. Execute the following code by hand 
+   (as we do in the lecture videos), and write
+   the output in your "answer.txt" file
+
+//start of code
+#include <stdio.h>
+#include <stdlib.h>
+
+int anotherFunction(int a, int b) {
+  int answer = 42;
+  int x = 0;
+  printf("In anotherFunction(%d,%d)\n",a,b);
+  while (b > a) {
+    printf("a is %d, b is %d\n", a, b);
+    answer = answer + (b - a);
+    b -= x;
+    a += x / 2;
+    x++;
+  }
+  return answer;
+}
+
+
+int someFunction(int x, int y) {
+  int a = x + y;
+  if (x < y) {
+    for (int i = 0; i < x; i++) {
+      printf("In the loop with i = %d, a = %d\n", i, a);
+      a = a + x;
+    }
+  }
+  else {
+    y = anotherFunction(y,a+4);
+  }
+  return a * y;
+}
+
+int main(void) {
+  int x = 2;
+  int a = someFunction(x,3);
+  printf("a = %d\n", a);
+  printf("x = %d\n", x);
+  int b = someFunction(3,x);
+  printf("b = %d\n", b);
+  printf("x = %d\n", x);
+  return EXIT_SUCCESS;
+}
+
+
+//end of code
+
+ 3. Check your work in part 2 by
+    (a) creating a file "test.c"
+    (b) copying and pasting the code from above into the "test.c" file
+        [remember: ctrl-space sets the mark, esc-w copies, and ctrl-y pastes]
+    (c) Compile your test.c program using the provided Makefile
+        [remember you can hit ctrl-c ctrl-v to compile]
+    (d) Run the newly created program (test) and redirect the output to 
+        the file  test.out:
+            ./test > test.out
+    (e) Use the diff command to compare the contents of test.out with
+        the contents of your answer.txt file
+           diff test.out answer.txt
+        Note that if diff prints nothing, the files are the same.
+        If there are differences, it will print them out with 
+        < and > signs to indicate which file the differing lines are from
+    (f) If your answer.txt file is no correct, retry the problem 
+        and/or ask for help.  Repeat 2 and 3 until it is correct.
+
+ 4. Use svn add and svn commit to check your answer.txt and 
+    test.c file into subversion
+
+
+ 
+
+
