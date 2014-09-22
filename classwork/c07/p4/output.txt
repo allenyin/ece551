@@ -1,0 +1,7 @@
+Go to (-3,-3)
+Go to (-1,-4)
+Go to (0,-6)
+Go to (-1,-7)
+Go to (-1,-8)
+Go to (-2,-8)
+Food at (-2,-8)

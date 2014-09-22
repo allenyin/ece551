@@ -1,0 +1,47 @@
+Classwork 7, Problem 2
+======================
+
+In classwork 4/problem 3, you wrote a function to reverse a string using
+iteration.  In this problem, you will write a function that does the same
+thing, but you MUST use recursion (no loops: the keywords for, while, and do may
+not appear in your reverse function---nor any function you write that it calls).
+
+As with c04/p3, you should write:
+
+  void reverse(char * str) 
+
+in the provided reverse.c file.  This function should reverse the string
+passed into it (that is, if given "abc", it should change the contents
+of that string to read "cba"). Note that this function's return type
+is "void"---it modifies the string passed into it in place.
+
+Unlike c04/p3 (where we did not know how to read/use input yet), you will
+also write the main function.  This function should read lines 
+from standard input (stdin), reverse them with your reverse function,
+and print them out. 
+
+As we do not yet know how to dynanmically allocate memory, you may limit
+the line size to 500 characters.  If the user inputs a line longer than 500 characters,
+you may exhibit any reasonable behavior (for example, reversing the first 500 characters,
+then reversing the next 500 characters, etc...) but may NOT crash.  Note that you should
+only reverse the contents of the line---you should not place the trailing newline
+at the start of the string.  So if the input is
+
+abc
+
+You should reverse the string "abc" not "abc\n".  You may use iteration in main
+to loop until the end of the file (e.g., while (fgets(...) != NULL) {...}, however
+this is the only loop you may have in your program).
+
+You will need to write your own Makefile, which should produce an executable program
+called "reverse".   Svn add and commit your code and Makefile.
+
+Hints:
+  - You will almost certainly want to write a "helper" function to do the majority
+    of the work for reversing the string, which takes additional parameters.
+  - Think about how reversal works recursively: what smaller piece would you want
+    to reverse to make the problem easier?
+  - For main, fgets is a good function to use to read the input
+  - fgets will place the trailing newline into the buffer---you might find strchr
+    useful to find and get rid of it.
+  

@@ -1,0 +1,66 @@
+Classwork 7, Problem 4.
+========================
+
+  A colony of ants (who happen to be skilled in Cartesian coordinates, and
+meticulously tracking what they do) have asked for your help.  When one of them
+finds food, he returns to the next, noting down the path he takes so that
+the other ants can find the food.  Unfortunately, the ants write down the
+path from the food to the nest as they return, meaning it is backwards
+of the path needed by the ants in the nest to find the food (the
+last direction is written first, and all of the directions
+point in the opposite way of what they should).  Sadly, the ants cannot
+reverse the direction list in their heads, making it somewhat less useful
+to them.
+
+Fortunately for the ants, their nest contains a computer, capable of executing
+a limited set of C programs (we'll call this ant-z-C) .  Specifically, ant-z-C
+does not contain any looping constructs (while, do-while, or for), but does contain
+everything else in the C language. 
+
+Your job is to write a program (in ant.c) which will take in the directions
+an ant wrote down to get home from the food, and give the ants directions to
+get from their nest to the food.  You must write in ant-z-C, so that the
+ants can run it on their computer (no loops, only recursion: for the entire program).
+
+The format of the input file is one direction per line, as an "x,y"
+vector (see input.txt).  On any input format error, you should print
+an error message to stderr, and exit.  The name of the input file will be
+specified as a command line argument.
+
+Note that reading lines from this file ("number,number") is very similar to
+reading input in p3 ("number^number"), so you may be able to re-use/adapt that code 
+to help.
+
+After reading in the reversed directions, you will compute and print out the
+directions to get to the food.  For each step in the directions, you should
+print out:
+
+Go to (x,y)
+
+where x and y are the coordinates to go to.
+After the last step, you should print out
+
+Food at (x,y)
+
+where x and y are the coordinates of the food (which are also printed
+by the last "Go to" output).  See "output.txt" for an example (the result of 
+running on input.txt.
+
+
+I have left the type declarations and four functions that I wrote to solve this 
+problem in ant.c.  You are welcome to use or ignore these as you wish.
+
+Note that here, point_t and vector_t are the same type, and in this
+context "vector" is in the mathematical sense.  You are welcome to use or
+ignore these as you see fit.
+
+You may find it easier to make a new type that lets you hold a
+ - a vector_t * [array of vector_t]
+ - and an int [saying how many there are]
+and return that from readVector rather than passing an int * to fill in---its 
+entirely your choice (you can also throw away these functions are write whatever you want).
+
+
+valgrind, test, debug, and submit ant.c
+
+Make sure you only use recursion: no loops!

@@ -1,0 +1,8 @@
+Mrotate	rotate.c	/^int main(int argc, char ** argv) {$/
+do_rotate	rotate.c	/^void do_rotate(char ** matrix) {$/
+make_matrix	rotate.c	/^void make_matrix(FILE * f, char ** matrix) {$/
+print_matrix	rotate.c	/^void print_matrix(char ** matrix) {$/
+reverse_row	rotate.c	/^void reverse_row(char *row) {$/
+rotate	rotate.c	/^void rotate(FILE * f) {$/
+swap	rotate.c	/^void swap(char * i, char * j) {$/
+transpose	rotate.c	/^void transpose(char ** matrix) {$/

@@ -1,0 +1,1 @@
+This thesis focuses on integrated and miniaturized wireless neural recording systems for bio-instruments for the in-depth understanding on animal behavior, human brain activities, and complex neuroprosthetic devices to treat various neurological diseases. The interdisplinary nature of the sytem requires a wide range of knowledge in biology and electronics to build such systems.

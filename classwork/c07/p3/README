@@ -1,0 +1,46 @@
+Classwork 7, Problem 2
+=======================
+
+For this problem, you will a program to compute exponents. 
+Specifically, you will edit "exp.c" to write two functions:
+
+long power(long x, long y);
+
+   and
+
+int main(void);
+
+
+The first of these will compute x raised to the y power (long is just like int,
+but may or may not have a larger range depending on the system). For example,
+if given x = 2, y = 4, this function would return 16 (2 to the 4th).
+
+You must write the "power" function using recursion: you may not use any
+loops (for, while, or do-while) in the power function.
+
+
+For main, you will write a loop which reads a line (from stdin, using getline), which has
+the format x^y (where x and y are numbers).  It will then pull out the two numbers,
+compute x to the y power (using the power function you are writing), and print out the
+result (Note that "%ld" is the proper format for a long).  Your program should
+repeat this proceess until end of file.
+
+If the format of the line is not correct, your program should print an error message
+to stderr, ignore the input, and read another line.  Your program may strictly
+require "number^number\n" for the input string.  You will likely want to use
+strtol for these conversions. 
+
+You can test your program by using the "bc" shell command, which is a command line
+calculator.   If you run bc, and type expressions, it will compute the result and
+print it back.  bc has much more capability and flexibility than your program, but you
+can use it to compute the right results to check your work.
+
+
+As always, be sure to valgrind cleanly.
+
+When you are done, commit exp.c
+
+
+
+
+
