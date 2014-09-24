@@ -61,8 +61,8 @@ int isPrime(int n) {
 }
 
 int main(void) {
-  printf("Factorization of 0:\n");
-  printFactors(0);
+  //printf("Factorization of 0:\n");
+  //printFactors(0);
   printf("Factorization of 1:\n");
   printFactors(1);
   printf("Factorization of 60:\n");
@@ -75,7 +75,7 @@ int main(void) {
   printFactors(2169720);
   printf("Factorization of 1789220887:\n");
   printFactors(1789220887);
-  printf("Facotrization of -1789220887:\n");
-  printFactors(-1789220887);
+  //printf("Facotrization of -1789220887:\n");
+  //printFactors(-1789220887);
   return EXIT_SUCCESS;
 }

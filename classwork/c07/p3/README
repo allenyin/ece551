@@ -40,7 +40,7 @@ As always, be sure to valgrind cleanly.
 
 When you are done, commit exp.c
 
-
-
+**My note: for valgrind check, use "valgrind --leak-check=full ./myProgram arg1 arg2"
+**My note: for valgrind with gdb, use "valgrind --vgdb=full --vgdb-error=1 ./myProgram"; Then open gdb and paste the valgrind output.
 
 

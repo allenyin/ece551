@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define BUFFER_SIZE 500
+
 void printline(char buffer[], int size) {
     for (int i=0; i<size; i++) {
         printf("%c", buffer[i]);
@@ -39,8 +41,8 @@ int main(void) {
      * input. The program stops taking inputs when EOF or "/n" is detected.
      * Then the reverse of the user input is outputted, and the program exits.
      */
-     char buffer[10];
-     while ( (fgets(buffer, 10, stdin)!= NULL)) {
+     char buffer[BUFFER_SIZE];
+     while ( (fgets(buffer, BUFFER_SIZE, stdin)!= NULL)) {
          
          reverse_helper(buffer);
      }
