@@ -1,0 +1,15 @@
+@	encrypt	4
+Additionally	README	12
+CFLAGS	Makefile	/^CFLAGS=-ggdb3 -Wall -Werror -std=gnu99 -pedantic$/
+Mencrypt	encrypt.c	/^int main(int argc, char ** argv) {$/
+clean	Makefile	/^clean:$/
+correct	README	15
+encrypt	encrypt.c	/^void encrypt(FILE * f, int key, FILE * outfile){$/
+encrypt	Makefile	/^encrypt: encrypt.c$/
+file	README	5
+name	README	10
+problem	README	4
+problem	README	7
+program	README	7
+stdout	README	9
+time	README	12

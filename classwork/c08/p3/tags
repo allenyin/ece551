@@ -1,0 +1,14 @@
+@	sortLines	12
+CFLAGS	Makefile	/^CFLAGS=-ggdb3 -Wall -Werror -std=gnu99 -pedantic$/
+Classwork	README	1
+MsortLines	sortLines.c	/^int main(int argc, char ** argv) {$/
+Problem	README	1
+Specifically	README	19
+arguments	README	/^ - If no arguments (other than its own name) are p/
+array	README	13
+clean	Makefile	/^clean:$/
+read_from_stream	sortLines.c	/^char ** read_from_stream(FILE * f) {$/
+sortData	sortLines.c	/^void sortData(char ** data, size_t count) {$/
+sortLines	Makefile	/^sortLines: sortLines.c$/
+sorted	README	17
+stringOrder	sortLines.c	/^int stringOrder(const void * vp1, const void * vp2/

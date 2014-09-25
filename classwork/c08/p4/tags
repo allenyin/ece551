@@ -1,0 +1,31 @@
+CCFLAGS	Makefile	/^CCFLAGS=-Wall -pedantic -std=gnu99 -Werror -ggdb3$/
+CLICK_CONTINUE	minesweeper.c	8
+CLICK_INVALID	minesweeper.c	7
+CLICK_KNOWN_MINE	minesweeper.c	6
+CLICK_LOSE	minesweeper.c	9
+HAS_MINE	minesweeper.c	12
+IS_MINE	minesweeper.c	/^#define IS_MINE(x) ((x) == HAS_MINE || (x) == KNOW/
+KNOWN_MINE	minesweeper.c	11
+Mminesweeper	minesweeper.c	/^int main(int argc, char ** argv) {$/
+Problem	README	1
+UNKNOWN	minesweeper.c	13
+_board_t	minesweeper.c	18
+addRandomMine	minesweeper.c	/^void addRandomMine(board_t * b) {$/
+board	minesweeper.c	19
+board_t	minesweeper.c	25
+checkWin	minesweeper.c	/^int checkWin(board_t * b) {$/
+click	minesweeper.c	/^int click (board_t * b, int x, int y) {$/
+countMines	minesweeper.c	/^int countMines(board_t * b, int x, int y) {$/
+determineKnownMines	minesweeper.c	/^void determineKnownMines(board_t * b) {$/
+doReveal	minesweeper.c	/^void doReveal(board_t * b, int x, int y, int revea/
+freeBoard	minesweeper.c	/^void freeBoard(board_t * b) {$/
+height	minesweeper.c	21
+makeBoard	minesweeper.c	/^board_t * makeBoard(int w, int h, int numMines) {$/
+maybeReveal	minesweeper.c	/^int maybeReveal(board_t * b, int x, int y) {$/
+minesweeper	Makefile	/^minesweeper: minesweeper.c$/
+playTurn	minesweeper.c	/^int playTurn(board_t * b, char ** linep, size_t *l/
+printBoard	minesweeper.c	/^void printBoard(board_t * b) {    $/
+readInt	minesweeper.c	/^int readInt(char ** linep, size_t * lineszp) {$/
+revealMines	minesweeper.c	/^void revealMines(board_t * b) {$/
+totalMines	minesweeper.c	22
+width	minesweeper.c	20

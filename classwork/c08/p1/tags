@@ -1,0 +1,4 @@
+Mtest	test.c	/^int main(void) {$/
+Problem	README	1
+f	test.c	/^int f(int n) {$/
+test	Makefile	/^test: test.c$/
