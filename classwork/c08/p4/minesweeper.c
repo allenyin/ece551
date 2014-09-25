@@ -200,6 +200,7 @@ void freeBoard(board_t * b) {
     free(b->board);
     b->board = NULL;
     free(b);
+    b = NULL;
 }
 
 int readInt(char ** linep, size_t * lineszp) {

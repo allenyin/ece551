@@ -7,17 +7,17 @@
 //of the strings in qsort.  You do not need
 //to modify it.
 int stringOrder(const void * vp1, const void * vp2) {
-  const char * const * p1 = vp1;
-  const char * const * p2 = vp2;
-  return strcmp(*p1, *p2);
+    const char * const * p1 = vp1;
+    const char * const * p2 = vp2;
+    return strcmp(*p1, *p2);
 }
 
 /* This function will sort and print data (whose length is count).
-   data: array of strings.
-   count: length of array - how many strings it contains
+data: array of strings.
+count: length of array - how many strings it contains
 */
 void sortData(char ** data, size_t count) {
-  qsort(data, count, sizeof(char *), stringOrder);
+    qsort(data, count, sizeof(char *), stringOrder);
 }
 
 char ** read_from_stream(FILE * f, int *nlines) {
@@ -82,8 +82,13 @@ int main(int argc, char ** argv) {
             char **data = read_from_stream(f, &nlines);
             sortData(data, nlines);
             print_and_free(data, nlines);
+            // close the file
+            if (fclose(f) != 0) {
+                perror("Failed to close the input file!");
+                return EXIT_FAILURE;
+            }
+
         }
-        printf("Finished sorting all files.\n");
     }
-  return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
