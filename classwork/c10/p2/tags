@@ -1,0 +1,22 @@
+CFlAGS	Makefile	/^CFlAGS=-Wall -Werror -std=gnu++98 -pedantic -ggdb3/
+Classwork	README	1
+Mcode.cpp	code.cpp	/^int main(void) {$/
+Person	code.h	16
+Person::Person	code.cpp	/^Person::Person(const char * n): name(n), myPet(NUL/
+Person::describe	code.cpp	/^void Person::describe(void) {$/
+Person::feedPet	code.cpp	/^void Person::feedPet(unsigned food) {$/
+Person::havePet	code.cpp	/^bool Person::havePet(void) {$/
+Person::myPet	code.h	19
+Person::name	code.h	18
+Person::setPet	code.cpp	/^void Person::setPet(Pet * p) {$/
+Pet	code.h	4
+Pet::Pet	code.cpp	/^Pet::Pet(const char * n, const char * s) : name(n)/
+Pet::describe	code.cpp	/^void Pet::describe(void) {$/
+Pet::feed	code.cpp	/^void Pet::feed(int food) {$/
+Pet::getHungrier	code.cpp	/^void Pet::getHungrier(unsigned howMuch) {$/
+Pet::hungerLevel	code.h	8
+Pet::name	code.h	6
+Pet::species	code.h	7
+Problem	README	1
+__CODE_H__	code.h	2
+code	Makefile	/^code:$/

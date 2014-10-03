@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "outname.h"
+
+char * computeOutputFileName(const char * inputName) {
+    // strlen counts the length of the string, excluding '\0'
+    char * outFileName = malloc((strlen(inputName)+8)*sizeof(*outFileName));
+    strcpy(outFileName, inputName);
+    strcat(outFileName, ".counts");
+    return outFileName;
+}

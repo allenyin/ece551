@@ -1,0 +1,7 @@
+Mkv_test	kv_test.c	/^int main(void) {$/
+NUM_LOOKUPS	kv_test.c	6
+freeKVs	kv.c	/^void freeKVs(kvarray_t * pairs) {$/
+lookupValue	kv.c	/^char * lookupValue(kvarray_t * pairs, const char */
+make_pair	kv.c	/^kvpair_t *make_pair(char * line) {$/
+printKVs	kv.c	/^void printKVs(kvarray_t * pairs) {$/
+readKVs	kv.c	/^kvarray_t * readKVs(const char * fname) {$/
