@@ -1,0 +1,9 @@
+Added valgrind clean IntMatrix.cpp.
+Key Takeaways:
+1) Arrays of pointers are declared differently than in python or matlab...remember to adhere strictly to the types.
+2) Remember to initialize the member pointers.
+3) delete() does not recursively call the destructors of the objects a member pointer points to.
+4) If "rhs" is declared as "IntMatrix & rhs", and "rows" is of type "IntArray ** rows", the correct way to compare rhs's and rows' member rows is to compare the actual object:
+    *(rows[i]) == rhs[i].
+   rows[i] returns a pointer to IntArray, *(rows[i]) dereferences it and returns an actual IntArray. rhs[i] returns *(rhs[i]) as per operator[] overloading. Thus the comparison is legal.
+

@@ -4,8 +4,8 @@ Grading p1 (worth 40 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==22755== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==22755== All heap blocks were freed -- no leaks are possible
+==17198== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==17198== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 Percent this problem: 100 (= 40.0 / 40 points)
 ------------------------------------------
@@ -17,8 +17,8 @@ Grading p2 (worth 25 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==22779== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==22779== All heap blocks were freed -- no leaks are possible
+==17222== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==17222== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 Percent this problem: 100 (= 25.0 / 25 points)
 ------------------------------------------
@@ -30,7 +30,7 @@ Grading p3 (worth 20 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==22779== All heap blocks were freed -- no leaks are possible
+==17222== All heap blocks were freed -- no leaks are possible
 Percent this problem: 100 (= 20.0 / 20 points)
 ------------------------------------------
 
@@ -55,16 +55,16 @@ vg.log
 ***********************
 * Starting test 1     *
 ***********************
-==22828== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==22828== All heap blocks were freed -- no leaks are possible
+==17271== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==17271== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)
 ***********************
 * Starting test 2     *
 ***********************
-==22837== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==22837== All heap blocks were freed -- no leaks are possible
+==17280== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==17280== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)

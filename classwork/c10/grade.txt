@@ -26,8 +26,8 @@ Grading p3 (worth 20 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==14269== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==14269== All heap blocks were freed -- no leaks are possible
+==28184== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==28184== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)
@@ -35,8 +35,8 @@ This test was scored as correct (50)
 * Starting test 2     *
 ***********************
 The output matches the expected output.
-==14276== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==14276== All heap blocks were freed -- no leaks are possible
+==28191== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==28191== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)
@@ -50,8 +50,8 @@ Grading p4 (worth 15 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==14309== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==14309== All heap blocks were freed -- no leaks are possible
+==28228== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==28228== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)
@@ -59,8 +59,8 @@ This test was scored as correct (50)
 * Starting test 2     *
 ***********************
 The output matches the expected output.
-==14316== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==14316== All heap blocks were freed -- no leaks are possible
+==28238== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==28238== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)
