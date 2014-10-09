@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{multirow}
+
+%NOTE: This proposal is intended as 
+% (1) A template for your document
+% (2) An example of the writing.
+% It is not intended as an example of the project's scope:
+% The project proposed in this sample is purposefully WAY
+% beyond the scope of the class.
+
+\begin{document}
+\begin{center}
+% Project Title
+{\Large Micro-architectural Processor Simulator}
+
+\vspace*{20pt}
+% List your group members' names and NetIds
+\begin{tabular}{lc}
+Andrew Hilton  & adh39 \\
+Tami Lehman & ts179 \\
+Patrick Huang    & zq28 \\
+\end{tabular}
+\end{center}
+%Give a brief (one paragraph) summary of the project.
+
+For our project, we will develop a micro-architectural processor
+simulator capable of simulating the x86\_64 (user space) ISA.  This
+processor will load and execute user-level binaries.  We will emulate
+system calls functionally in the simulator---we do not intend to 
+implement full system simulation.
+
+
+\section{Functional Requirements}
+% Describe the functional requirements.
+% This is what you would need to do for a mid-B to a low-A
+% Be *as specific as possible here*.  If you specifically 
+% want to make clear that certain functionality is outside
+% the scope of what you propose, please be sure to do so.
+
+
+\begin{description}
+\item[Memory] We will implement a functional model of physical memory,
+  as well as giving each process its own virtual address space and
+  translation.  As we will not simulate an operating system, the
+  virtual to physical translations for a program will be fixed once
+  they are created.
+\item[ELF binary loading]  We will implement an ELF loader capable of
+  reading a statically linked ELF binary into our simulated memory. 
+  We reserve loading dynamically linked binaries for a stretch goal.
+\item[Instruction Decoding] We will implement an x86\_64 instruction
+  decoder, capable of decoding the subset of x86\_64 instructions
+  which appear in the SPEC2006 benchmark suite.  Note that we do not
+  intend to implement \emph{all} x86\_64 instructions, as there are
+  quite a large number of them.
+\item[Micro-op cracking] We will crack the x86\_64 micro-ops into a
+  simple RISC-style micro-ISA.
+\item[Micro-op execution] We will provide a functional model capable
+  of executing our micro-ops (and thus the instructions we can
+  decode).
+\end{description}
+
+\section{Stretch Goals}
+% Once you have fulfilled your basic requirements, what do you
+% see as the more ambitious steps to take you into the high-A range?
+% Its good if you can be precise, but, for these it is acceptable
+% to be a bit more vague.
+
+\begin{description}
+\item[Simple timing model] Our firs stretch goal will be to provide a
+  simple 5 stage in-order scalar timing model, with a 2 level cache
+  hierarchy.  The timing model will report IPC, but no other stats.
+\item[Branch Prediction] Our second stretch goal will be to implement a
+  branch predictor for our timing model.
+\item[Super Scalar] Our third stretch goal will be to add an option to
+  increase the super scalar width of the processor.
+\item[Dynamically linked ELF loading] Our fourth stretch goal will be
+  to support loading of dynamically linked ELF binaries.
+  simulations.
+\end{description}
+
+
+\section{Software Design Plan}
+% In this section, you should lay out a rough plan to build your 
+% software.  How do you split the work amongst a team?  What
+% pieces are you going to build first?  Can you test along the way?
+% Are there any other things you need to build which are not
+% part of your ``deliverables''? (e.g., to help test)
+% What is your project timeline?  How many person-hours of work
+% do you expect for each task?
+%
+% The key thing here is that I want to see that you have thought
+% about what it will take to accomplish your goal, and planned
+% on a reasonably sized project
+%
+% I should feel like you have a plan to at least get through your
+% functional requirements within the timeline of this project
+% (and picking a project substanative enough for a final project).
+%
+% A good rule of thumb is about 30 hours per person, since
+% you no longer have  videos to watch and this project spans 3.5 weeks
+
+Our first step will be to get the binary image loaded into memory.  We
+see two discrete tasks in this step: creating the memory model, and
+writing the ELF loader.  We plan to split these tasks between two
+group members.  As we build this, we will create functionality in
+our memory model to dump its contents, and use that to test the ELF
+loader functionality.
+
+At the same time that is being developed, our third group member will
+begin making the instruction decoder.  We plan to build a tool to let
+us write a convenient description of the instruction encoding, and
+generate an FSM for the decoder.  This tool will also allow us to
+specify the micro-op crackings of each instruction. As this piece is
+developed, we will write down the encodings of many instructions and
+use them as test cases.  We expect to test this by examining the FSM
+(C code) output by the tool.
+
+Once the memory model and/or ELF loader are complete, those teammates
+will transition to working on the execution capabilities. At this
+point, we will be able to test by loading and actual binaries
+(starting simple, and working to more complex ones).
+
+Once we are to this phase, it will mostly be a matter of running
+programs until we find an instruction we cannot handle, adding
+that functionality, and running again.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Task}      &  \multicolumn{3}{|c|}{Expected Person-Hours}    &  \multirow{2}{*}{Start} & \multirow{2}{*}{End} & \multirow{2}{*}{Person} \\
+                           &  Implement     & Test       & Debug            &                         &                      &                         \\
+\hline
+\hline
+  Memory Model             &   2            & 3          & 3                & Nov 3                   & Nov 9                & Tami  \\
+  ELF Loader               &   4            & 6          & 4                & Nov 3                   & Nov 12               & Patrick \\
+  Decode/Crack             &   4            & 4          & 4                & Nov 3                   & Nov 15               & Drew \\
+  Execution (75\%)         &   6            & 6          & 3                & Nov 9                   & Nov 21               & Tami \\
+  Execution (25\%)         &   2            & 2          & 1                & Nov 9                   & Nov 21               & Patrick \\
+\hline
+ \multicolumn{7}{|c|}{Stretch Goals} \\
+\hline
+Simple Timing Model        &   3           & 3         &   4                & Nov 15                  & Nov 21               & Drew \\
+Branch Prediction          &   2           & 2         &   3                & Nov 21                  & Nov 27               & Tami \\
+Super Scalar               &   3           & 3         &   3                & Nov 21                  & Nov 27               & Drew \\
+Dynamicly linked ELF       &   4           & 3         &   3                & Nov 21                  & Nov 27               & Patrick \\
+
+\hline
+\end{tabular}
+\caption{Summary of work breakdown and time expectations.}
+\label{Table:planSummary}
+\end{center}
+\end{table}
+
+Table~\ref{Table:planSummary} sumarizes our expected time breakdown by task, as well as who is planning to do each task, and what our exected schedule of starting/completing the tasks is.
+
+
+\section{Specific Expertise}
+% Lay out the specific technical expertise (beyond just programming)
+% that your group needs to succeed.  If you have that expertise
+% already or if you have/know of the resources you need, point that
+% out.  If you lack information and will need me to help you find it,
+% this is the time to let me know.
+% 
+% That last part is important, so I'll say it again:
+% If there is specific technical expertise that you might lack,
+% tell me NOW.  If you propose (complex artificial intelligence thing
+% I know nothing about), don't know to me a week before the deadline
+% and tell me that you don't know anything about AI...
+
+This project requires significant expertise in processor
+micro-architecture, as well as the x86\_64 ISA.  Our group members
+have much expertise in this area, so we do not expect many problems.
+
+We do not remember the details of the ELF format (especially for
+dynamically linked ELF binaries), but expect to be able to find that 
+in online documentation.
+
+We have an ISA manual for x86\_64, so we can find whatever details
+we need there as we implement the instructions.
+
+\end{document}

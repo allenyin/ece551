@@ -1,0 +1,23 @@
+Your project proposals are due on Friday, October 11th (right before
+fall break).  You should form groups of 2 or 3, and come up with 
+a project idea in between now and then.  
+
+In this directory, you will find a proposal.tex, which is a LaTeX
+template for your proposal.  Please note that it is an example of
+how your proposal should be written, not the scope of your project.
+
+Remember that November we will transition back to the "traditional"
+classroom, and your out of class time will be primarily dedicated
+to the project.   This means, you should come up with something
+that your team can accomplish in ~3.5 weeks.
+
+
+Please note that you only need to submit the LaTeX, but it
+should be correct LaTeX: running
+
+  pdflatex proposal.tex
+
+should produce a pdf with your proposal.  Please pdflatex your proposal
+and ensure that the resulting pdf reflects what you want us to see
+(in terms of both content and formatting).
+

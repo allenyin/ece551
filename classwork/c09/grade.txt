@@ -4,8 +4,8 @@ Grading p1 (worth 40 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==17198== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==17198== All heap blocks were freed -- no leaks are possible
+==20095== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==20095== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 Percent this problem: 100 (= 40.0 / 40 points)
 ------------------------------------------
@@ -17,8 +17,8 @@ Grading p2 (worth 25 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==17222== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==17222== All heap blocks were freed -- no leaks are possible
+==20119== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==20119== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 Percent this problem: 100 (= 25.0 / 25 points)
 ------------------------------------------
@@ -30,41 +30,26 @@ Grading p3 (worth 20 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==17222== All heap blocks were freed -- no leaks are possible
+==20119== All heap blocks were freed -- no leaks are possible
 Percent this problem: 100 (= 20.0 / 20 points)
 ------------------------------------------
 
 
 Grading p4 (worth 15 points)
 -------------------------------------------------
-compile.log
-diff.out
-diff_script_2.sh
-diff_script.sh
-kvs1.txt
-kvs2.txt
-list1a.txt
-list1b.txt
-list2a.txt
-list2b.txt
-list2c.txt
-test.err
-test.out
-test.txt
-vg.log
 ***********************
 * Starting test 1     *
 ***********************
-==17271== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==17271== All heap blocks were freed -- no leaks are possible
+==20167== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==20167== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)
 ***********************
 * Starting test 2     *
 ***********************
-==17280== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==17280== All heap blocks were freed -- no leaks are possible
+==20176== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==20176== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)
