@@ -1,0 +1,25 @@
+Circle	circle.h	3
+Circle::Circle	circle.cpp	/^Circle::Circle(Point p, double r) : center(p), rad/
+Circle::Circle	circle.cpp	/^Circle::Circle(): center(Point()), radius(0) {$/
+Circle::center	circle.h	5
+Circle::getCenter	circle.cpp	/^Point Circle::getCenter() const {$/
+Circle::getRadius	circle.cpp	/^double Circle::getRadius() const {$/
+Circle::intersectionArea	circle.cpp	/^double Circle::intersectionArea(const Circle & oth/
+Circle::move	circle.cpp	/^void Circle::move(double dx, double dy) {$/
+Circle::radius	circle.h	6
+Mmain.cpp	main.cpp	/^int main(void) { $/
+Point	point.h	2
+Point::Point	point.cpp	/^Point::Point() : x(0), y(0) {$/
+Point::distanceFrom	point.cpp	/^double Point::distanceFrom(Point const& p) {$/
+Point::getX	point.cpp	/^double Point::getX() const {$/
+Point::getY	point.cpp	/^double Point::getY() const {$/
+Point::move	point.cpp	/^void Point::move(double dx, double dy) {$/
+Point::x	point.h	4
+Point::y	point.h	5
+doIntersect	main.cpp	/^void doIntersect (char * line, Circle ** circles, /
+doMove	main.cpp	/^void doMove (char * line, Circle ** circles, int n/
+freeCircles	main.cpp	/^void freeCircles(Circle ** circles, int ncircles) /
+readCircles	main.cpp	/^Circle ** readCircles(int ncircles) {$/
+readDouble	main.cpp	/^int readDouble(char ** linep, double * out) {$/
+readInt	main.cpp	/^int readInt(char ** linep, int * out) {$/
+skipWs	main.cpp	/^char * skipWs (char * line) {$/

@@ -1,0 +1,48 @@
+Grading p1 (worth 40 points)
+-------------------------------------------------
+/home/ece551/grading/work/scratch
+You  have found the bug!
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+You  have found the bug which segfaults!
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+Percent this problem: 100 (= 40.0 / 40 points)
+------------------------------------------
+
+
+Grading p2 (worth 25 points)
+-------------------------------------------------
+This problem appears correct
+Percent this problem: 100 (= 25.0 / 25 points)
+------------------------------------------
+
+
+Grading p3 (worth 20 points)
+-------------------------------------------------
+Pass simple number test!
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+Pass complex number test!
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+Percent this problem: 100 (= 20.0 / 20 points)
+------------------------------------------
+
+
+Grading p4 (worth 15 points)
+-------------------------------------------------
+PATH 0 found
+PATH 1 found
+PATH 2 found
+PATH 3 found
+PATH 4 found
+PATH 5 found
+PATH 6 found
+PATH 7 found
+Percent this problem: 100 (= 15.0 / 15 points)
+------------------------------------------
+
+
+=============================================
+Overal score: 100.0

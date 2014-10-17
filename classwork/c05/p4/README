@@ -1,0 +1,37 @@
+Classwork 5. Problem 4
+======================
+
+For this problem, you will be whitebox testing the function f found in the code.c file.
+Specifically, you will write a set of test cases in the main function which give
+path coverage of this function.  Note that unlike most testing, you are not actually
+going to check the answer in your test case (since we have provided no specification
+of what this function should do), but rather just come up with the test inputs sufficient
+to give path coverage.  
+
+For simplicity, we will consider the two compound tests (a[i] < v && i < n-1 and
+a[j] > v && j > 0) to be one single test, even though in actuality they form
+two blocks in the control flow graph.  However, if we consider these as separate
+tests, the number of paths that you have to check blows up from 8 to 32.
+
+As we just mentioned, there are 8 possible paths through this function.  To
+see this (and help you form your test cases), we strongly recommend drawing the control
+flow graph for the function to help you think about the test cases you should create.
+You will write these testcases in the main function of tester.c
+
+We have provided a Makefile which will create two targets for you:
+
+ - tester:  this will compile your tester.c and code.c together with debugging
+            information turned on.  You will likely want to use gdb with it
+            to ensure that your testcases are taking the paths that you expect them to,
+            and to see why not when they are not.
+
+ - tester-report:  this will compile your tester.c with report.rpt.o, which will
+            track which paths your code actually covers and report them to you.
+            For each test case that you execute, it will report the arguments
+            to f, then what path it took.  At the end, it will report which
+            of the 8 paths you did or did not cover.  Of course, the point
+            of this excercise is to devise tests which cover all 8 paths.
+
+
+ 
+

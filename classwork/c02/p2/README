@@ -1,0 +1,28 @@
+Classwork 2: Problem 2
+----------------------
+
+For this problem, you will write a function which determines if a
+number is "perfect."  A positive number is "perfect" iff it is equal
+to the sum of its divisors, except for itself.  For example, the
+divisors of 6 are 1,2,3, and 6.  Ignoring itself (6), if we add the
+rest of them: 1 + 2 + 3 = 6, so 6 is "perfect".  By contrast, the
+divisors of 8 (other than itself) are 1,2, and 4, but 1+ 2 + 4 = 7, so
+8 is not "perfect".  0 and the negative numbers are all not "perfect".
+
+ 1. Create the file "perfect.c"
+ 2. Write the function
+     int isPerfect(int x)
+    This function should determine if x is perfect, and if so,
+    it should return 1.  If x is not perfect, it should return 0.
+ 3. Write a main function which prints out
+      "%d is perfect!\n"
+    for all of the perfect numbers less than 10,000 (in increasing
+    order). 
+ 4. Compile and test your program. Your program's output should be:
+
+6 is perfect!
+28 is perfect!
+496 is perfect!
+8128 is perfect!
+
+ 5. Add perfect.c to svn and commit it.

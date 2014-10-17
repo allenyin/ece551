@@ -1,0 +1,42 @@
+Grading p1 (worth 40 points)
+-------------------------------------------------
+This problem appears correct
+Percent this problem: 100 (= 40.0 / 40 points)
+------------------------------------------
+
+
+Grading p2 (worth 25 points)
+-------------------------------------------------
+This problem appears correct
+Percent this problem: 100 (= 25.0 / 25 points)
+------------------------------------------
+
+
+Grading p3 (worth 20 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==27696== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==27696== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+Percent this problem: 100 (= 20.0 / 20 points)
+------------------------------------------
+
+
+Grading p4 (worth 15 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==27720== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==27720== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+Percent this problem: 100 (= 15.0 / 15 points)
+------------------------------------------
+
+
+=============================================
+Overal score: 100.0

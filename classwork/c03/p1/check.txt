@@ -1,0 +1,43 @@
+*p = 5
+Now *p = 16
+myArray[0] = 5
+myArray[1] = 16
+myArray[2] = 33
+myArray[3] = 99
+--------------
+myArray[0] = 5
+myArray[1] = 16
+myArray[2] = 33
+myArray[3] = 99
+--------------
+myArray[0] = 5
+myArray[1] = 16
+myArray[2] = 33
+myArray[3] = 99
+--------------
+myArray[0] = 5
+myArray[1] = 16
+myArray[2] = 33
+myArray[3] = 12
+--------------
+myArray[0] = 5
+myArray[1] = 16
+myArray[2] = 33
+myArray[3] = 12
+--------------
+myArray[0] = 5
+myArray[1] = 42
+myArray[2] = 33
+myArray[3] = 12
+--------------
+here1 q[0]=42
+here2 q[1]=33
+myArray[0] = 5
+myArray[1] = 42
+myArray[2] = 9
+myArray[3] = 12
+--------------
+anArray[0] = 5
+anArray[1] = 42
+anArray[2] = 9
+anArray[3] = 12

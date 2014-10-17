@@ -1,0 +1,17 @@
+Classwork 5, Problem 3
+======================
+
+For this problem, you will be fixing the provided code in sort.c,
+which is supposed to sort its command line arguments (which should all
+be ints).  Use gdb to fix this program so that it correctly sorts
+the array (places the elements in ascending order).  The main
+function prints the sorted array, one element per line.
+
+Note that this program does not check that its arguments are actually
+ints.  For this program, we will consider the behavior of atoi to be
+correct with no error checking.
+
+Note: if you need to stop a program in an infinite loop while you are
+running it in the terminal, press Ctrl-C.  If you need to stop it 
+while you are running it in emacs, you will need to press Ctrl-C twice.
+

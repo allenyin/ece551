@@ -1,0 +1,12 @@
+Mrectangle	rectangle.c	/^int main (void) {$/
+_rectangle	rectangle.c	19
+canonicalize	rectangle.c	/^rectangle canonicalize(rectangle r) {$/
+height	rectangle.c	23
+intersection	rectangle.c	/^rectangle intersection(rectangle r1, rectangle r2)/
+max	rectangle.c	/^int max (int a, int b) {$/
+min	rectangle.c	/^int min (int a, int b) {$/
+printRectangle	rectangle.c	/^void printRectangle(rectangle r) {$/
+rectangle	rectangle.c	25
+width	rectangle.c	22
+x	rectangle.c	20
+y	rectangle.c	21

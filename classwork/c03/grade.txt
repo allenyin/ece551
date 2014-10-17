@@ -26,20 +26,6 @@ Grading p3 (worth 20 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==801== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==801== All heap blocks were freed -- no leaks are possible
-Valgrind reported no problems
-This test counts as 50% of the score for this problem
-This test was scored as correct (50)
-***********************
-* Starting test 2     *
-***********************
-The output matches the expected output.
-==808== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==808== All heap blocks were freed -- no leaks are possible
-Valgrind reported no problems
-This test counts as 50% of the score for this problem
-This test was scored as correct (50)
 Percent this problem: 100 (= 20.0 / 20 points)
 ------------------------------------------
 
@@ -50,20 +36,6 @@ Grading p4 (worth 15 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==832== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==832== All heap blocks were freed -- no leaks are possible
-Valgrind reported no problems
-This test counts as 50% of the score for this problem
-This test was scored as correct (50)
-***********************
-* Starting test 2     *
-***********************
-The output matches the expected output.
-==839== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==839== All heap blocks were freed -- no leaks are possible
-Valgrind reported no problems
-This test counts as 50% of the score for this problem
-This test was scored as correct (50)
 Percent this problem: 100 (= 15.0 / 15 points)
 ------------------------------------------
 
