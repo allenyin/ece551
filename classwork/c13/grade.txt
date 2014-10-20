@@ -1,0 +1,90 @@
+Grading p1 (worth 40 points)
+-------------------------------------------------
+This problem appears correct
+Percent this problem: 100 (= 40.0 / 40 points)
+------------------------------------------
+
+
+Grading p2 (worth 25 points)
+-------------------------------------------------
+***********************
+* Starting test 1     *
+***********************
+The output matches the expected output.
+==17613== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==17613== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+***********************
+* Starting test 2     *
+***********************
+The output matches the expected output.
+==17620== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==17620== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 25% of the score for this problem
+This test was scored as correct (25)
+***********************
+* Starting test 3     *
+***********************
+The output matches the expected output.
+==17627== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==17627== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+This test counts as 50% of the score for this problem
+This test was scored as correct (50)
+Percent this problem: 100 (= 25.0 / 25 points)
+------------------------------------------
+
+
+Grading p3 (worth 20 points)
+-------------------------------------------------
+Compilation failed (make failed: make: Entering directory `/home/ece551/svn/ece551-fall2014-asy13/classwork/c13/p3'
+g++ -o expr -std=gnu++98 -Wall -Werror -ggdb3 expr.cpp
+expr.cpp: In function ‘Expression* makeExpr(char, Expression*, Expression*)’:
+expr.cpp:20:16: error: expected type-specifier before ‘MinusExpression’
+expr.cpp:20:16: error: cannot convert ‘int*’ to ‘Expression*’ in return
+expr.cpp:20:16: error: expected ‘;’ before ‘MinusExpression’
+expr.cpp:20:39: error: ‘MinusExpression’ was not declared in this scope
+expr.cpp:22:16: error: expected type-specifier before ‘TimesExpression’
+expr.cpp:22:16: error: cannot convert ‘int*’ to ‘Expression*’ in return
+expr.cpp:22:16: error: expected ‘;’ before ‘TimesExpression’
+expr.cpp:22:39: error: ‘TimesExpression’ was not declared in this scope
+expr.cpp:24:16: error: expected type-specifier before ‘DivExpression’
+expr.cpp:24:16: error: cannot convert ‘int*’ to ‘Expression*’ in return
+expr.cpp:24:16: error: expected ‘;’ before ‘DivExpression’
+expr.cpp:24:37: error: ‘DivExpression’ was not declared in this scope
+make: *** [expr] Error 1
+make: Leaving directory `/home/ece551/svn/ece551-fall2014-asy13/classwork/c13/p3'): skipping all tests
+Percent this problem: 0 (= 0 / 20 points)
+------------------------------------------
+
+
+Grading p4 (worth 15 points)
+-------------------------------------------------
+Compilation failed (make failed: make: Entering directory `/home/ece551/svn/ece551-fall2014-asy13/classwork/c13/p4'
+g++ -o expr -std=gnu++98 -Wall -Werror -ggdb3 expr.cpp
+expr.cpp: In function ‘Expression* makeExpr(char, Expression*, Expression*)’:
+expr.cpp:20:16: error: expected type-specifier before ‘MinusExpression’
+expr.cpp:20:16: error: cannot convert ‘int*’ to ‘Expression*’ in return
+expr.cpp:20:16: error: expected ‘;’ before ‘MinusExpression’
+expr.cpp:20:39: error: ‘MinusExpression’ was not declared in this scope
+expr.cpp:22:16: error: expected type-specifier before ‘TimesExpression’
+expr.cpp:22:16: error: cannot convert ‘int*’ to ‘Expression*’ in return
+expr.cpp:22:16: error: expected ‘;’ before ‘TimesExpression’
+expr.cpp:22:39: error: ‘TimesExpression’ was not declared in this scope
+expr.cpp:24:16: error: expected type-specifier before ‘DivExpression’
+expr.cpp:24:16: error: cannot convert ‘int*’ to ‘Expression*’ in return
+expr.cpp:24:16: error: expected ‘;’ before ‘DivExpression’
+expr.cpp:24:37: error: ‘DivExpression’ was not declared in this scope
+expr.cpp: In function ‘int main()’:
+expr.cpp:95:57: error: ‘class Expression’ has no member named ‘evaluate’
+make: *** [expr] Error 1
+make: Leaving directory `/home/ece551/svn/ece551-fall2014-asy13/classwork/c13/p4'): skipping all tests
+Percent this problem: 0 (= 0 / 15 points)
+------------------------------------------
+
+
+=============================================
+Overal score: 65.0

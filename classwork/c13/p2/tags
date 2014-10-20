@@ -1,0 +1,6 @@
+Mexpr.cpp	expr.cpp	/^int main(void) {$/
+isValidOp	expr.cpp	/^bool isValidOp(char c) {$/
+makeExpr	expr.cpp	/^Expression * makeExpr(char op, Expression * lhs, E/
+parse	expr.cpp	/^Expression * parse(const char ** strp) {$/
+parseOp	expr.cpp	/^Expression * parseOp(const char ** strp) {$/
+skipSpace	expr.cpp	/^void skipSpace(const char ** strp) {$/
