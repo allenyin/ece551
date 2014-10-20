@@ -27,6 +27,19 @@ class LinkedList {
         Node * head;
         Node * tail;
         int size;
+        
+        void clear_nodes() {
+            if (head == NULL) {
+                return;
+            }
+            while (head != NULL) {
+                Node * temp = head;
+                head = head->next;
+                delete temp;
+            }
+            tail = NULL;
+        }
+
     public:
         LinkedList() : head(NULL), tail(NULL), size(0) {}
         
@@ -57,25 +70,19 @@ class LinkedList {
         } 
                 
         ~LinkedList() {
-            if (head == NULL) {
-                return;
-            }
-            while (head != NULL) {
-                Node * temp = head;
-                head = head->next;
-                delete temp;
-            }
+            clear_nodes();
         }
-
+        
         const int getSize() const {
             return size;
         }
         
         LinkedList<T> & operator=(const LinkedList<T> & rhs) {
-            assert((this != rhs) && (rhs.head != NULL));
-            head = NULL;
+            assert((this != &rhs) && (rhs.head != NULL));
             size = rhs.size;
             if (rhs.head != NULL) {
+                clear_nodes();
+                head = NULL;
                 Node * curr;
                 Node * prev;
                 Node * rhs_curr = rhs.head;
@@ -95,6 +102,9 @@ class LinkedList {
                     rhs_curr = rhs_curr->next;
                 }
                 tail = curr;
+            } else {
+                head = NULL;
+                tail = NULL;
             }
             return *this;
         }

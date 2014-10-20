@@ -60,7 +60,20 @@ int main(int argc, char ** argv) {
     std::cout << "l3 is now: ";
     print_LinkedList(*l3);
 
-    //std::cout << (*l3)[1];
+    std::cout << "Adding 1 to l3 again";
+    l3->addBack(1);
+    std::cout << "l3 is now: ";
+    print_LinkedList(*l3);
+    std::cout << "Assigning l3 to be same as l2\n";
+    *l3 = l2; 
+    std::cout << "Now l2 is: ";
+    print_LinkedList(l2);
+    std::cout << "Now l3 is: ";
+    print_LinkedList(*l3);
+
+    // test exception
+    //std::cout << "l3[5] is: " << (*l3)[5];
+
 
 
     delete l3;
