@@ -1,0 +1,52 @@
+Classwork 15, Problem 4
+========================
+
+This problem will continue adding generic traversals to your LinkedList (again,
+they should be in ll.h, using the LinkedList from c14).  You will write three
+more generic traversals: filter, split, and foldl.
+
+The first of these, filter, should have the following signature:
+
+  void filter(Function<bool, const T&> * f)
+
+It should traverse this linked list, and for each item, invoke f upon it.  If
+f returns true for a particular item, it remains in the list.  If f returns false
+for a particular item, it is removed from the list.
+
+The second of these, split, should have the following signature:
+
+ std::vector<LinkedList<T> > split(Function<unsigned, const T&> * f) const
+
+This function splits the elements of the LinkedList up into multiple LinkedLists,
+as determined by the return value of f.  Specifically, for each item of
+this list, f is invoked, and it returns an unsigned int, which is used as
+the index into the answer vector to determine where to place this element. Note
+that "this" list is unmodified. 
+
+For example, we might call split with a function which returns its argument mod 3 (x %3)
+on the list [1,2, 3, 4, 5,6,7], which would return a vector whose 0th element is the
+list [3,6], whose 1st element is the list [1,4,7], and whose 2nd element is [2,5].
+
+The third of these, foldl, has the signature:
+
+ template<typename R> R foldl (Function<R, std::pair<const T&,const R&> > * f, const R& start)
+
+This function "folds" the operation f from the start of the list to the end.  For
+each item of the list, it invokes f on a pair with the current item of the list,
+and the current answer, to get a new answer.   The initial answer (which is what
+the function returns on an empty list) is the second parameter, start.
+
+That is, if we have a list with elements [e1, e2, e3, ... eN] we would compute
+
+ans1 = f(pair(e1, start))
+ans2 = f(pair(e2, ans1))
+ans3 = f(pair(e3, ans2))
+...
+ansN = f(pair(eN, ansNminus1)
+
+and return ansN
+
+Hint: this function is easy to implement recursively. 
+
+
+As with p3, you are responsible for testing these functions yourself.

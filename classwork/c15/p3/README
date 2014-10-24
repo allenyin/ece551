@@ -1,0 +1,39 @@
+Classwork 15, Problem 3
+=======================
+
+For this problem, you will be modifying your LinkedList from classwork 14 to
+add three generic traversals: app, update, and map.
+
+The first of these, app, should have the following signature (inside of
+your LinkedList<T> templated class):
+
+
+  void  app(Function<void,const T&> * f) const
+
+it should invoke f on each item of the list (in order, from first to last)
+For example, if f prints its argument, this function would print the contents
+of the list in order.
+
+The second of these, update, should have the following signature:
+
+  void update(Function<T, const T&> * f)
+
+It should invoke f on each item of the list (in order from first to last), and
+replace the corresponding list with the return value of f.  For example,
+if f returns its argument + 1, then it would modify the list with [1, 2, 3] to
+become the list [2, 3, 4].
+
+The third of these these, map, should have the following signature:
+
+  template<typename R> LinkedList<R> * map(Function<R,const T&> *f) const
+
+It should create (and return) a *new* LinkedList (which holds Rs), where
+each item of the returned list is determined by invoking f on the items
+of this linked list (again, in order).  For example, if f converts
+an int to a string, then maping f on the list [1,2,3] would return
+the list ["1", "2", "3"].  The original list is not modified.
+
+
+For this problem, you are responsible for testing your program yourself.
+You should write the three functions above in your ll.h file.  You should
+write test cases in a separate file. 
