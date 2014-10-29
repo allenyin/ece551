@@ -1,5 +1,2 @@
-test: test.cpp function.h ll.h
-	g++ -o test -std=gnu++98 -Wall -Werror -ggdb3 test.cpp
-
-clean:
-	rm -f *~ test
+ll: ll.cpp ll.h
+	g++ -o ll -ggdb3 -Wall -Werror -pedantic -std=gnu++98 ll.cpp

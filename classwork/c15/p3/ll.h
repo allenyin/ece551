@@ -131,8 +131,8 @@ class LinkedList {
         LinkedList<T> & operator=(const LinkedList<T> & rhs) {
             assert((this != &rhs));
             size = rhs.size;
+            clear_nodes();  // clear nodes regardless
             if (rhs.head != NULL) {
-                clear_nodes();
                 head = NULL;
                 Node * curr;
                 Node * prev;

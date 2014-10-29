@@ -4,8 +4,8 @@ Grading p1 (worth 100 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==14020== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==14020== All heap blocks were freed -- no leaks are possible
+==3644== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==3644== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -13,8 +13,8 @@ This test was scored as correct (25)
 * Starting test 2     *
 ***********************
 The output matches the expected output.
-==14027== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==14027== All heap blocks were freed -- no leaks are possible
+==3651== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==3651== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -22,8 +22,8 @@ This test was scored as correct (25)
 * Starting test 3     *
 ***********************
 The output matches the expected output.
-==14034== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==14034== All heap blocks were freed -- no leaks are possible
+==3658== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==3658== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -31,8 +31,8 @@ This test was scored as correct (25)
 * Starting test 4     *
 ***********************
 The output matches the expected output.
-==14041== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==14041== All heap blocks were freed -- no leaks are possible
+==3665== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==3665== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
