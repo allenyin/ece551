@@ -1,0 +1,64 @@
+%.o	Makefile	/^%.o: %.cpp bitstring.h  node.h  readFreq.h$/
+BitFileWriter	bitstring.h	21
+BitFileWriter::BitFileWriter	bitstring.cpp	/^BitFileWriter::BitFileWriter(const char * fname): /
+BitFileWriter::BitFileWriter	bitstring.cpp	/^BitFileWriter::BitFileWriter(const BitFileWriter &/
+BitFileWriter::f	bitstring.h	26
+BitFileWriter::operator=	bitstring.cpp	/^BitFileWriter & BitFileWriter::operator=(const Bit/
+BitFileWriter::pending	bitstring.h	27
+BitFileWriter::pushData	bitstring.cpp	/^void BitFileWriter::pushData() {$/
+BitFileWriter::writeBitString	bitstring.cpp	/^void BitFileWriter::writeBitString(const BitString/
+BitFileWriter::writeByte	bitstring.cpp	/^void BitFileWriter::writeByte(unsigned char b) {$/
+BitFileWriter::~BitFileWriter	bitstring.cpp	/^BitFileWriter::~BitFileWriter() {$/
+BitReader	bitstring.h	36
+BitReader::BitReader	bitstring.h	/^ BitReader(FILE * input): f(input), bs() {}$/
+BitReader::bs	bitstring.h	39
+BitReader::ensureData	bitstring.cpp	/^void BitReader::ensureData(int n) {$/
+BitReader::f	bitstring.h	38
+BitReader::readBit	bitstring.cpp	/^bool BitReader::readBit() {$/
+BitReader::readByte	bitstring.cpp	/^unsigned char BitReader::readByte() {$/
+BitReader::~BitReader	bitstring.h	/^  virtual ~BitReader() {$/
+BitString	bitstring.h	6
+BitString::BitString	bitstring.cpp	/^BitString::BitString():bits() {}$/
+BitString::BitString	bitstring.cpp	/^BitString::BitString(std::deque<bool> b): bits(b) /
+BitString::append	bitstring.cpp	/^void BitString::append(const BitString & rhs) {$/
+BitString::bits	bitstring.h	7
+BitString::insertByte	bitstring.cpp	/^void BitString::insertByte(unsigned char b) {$/
+BitString::plusOne	bitstring.cpp	/^BitString BitString::plusOne()const {$/
+BitString::plusZero	bitstring.cpp	/^BitString BitString::plusZero() const {$/
+BitString::printMe	bitstring.cpp	/^void BitString::printMe(FILE * f) const {$/
+BitString::removeBit	bitstring.cpp	/^bool BitString::removeBit() {$/
+BitString::removeByte	bitstring.cpp	/^unsigned char BitString::removeByte() {$/
+BitString::size	bitstring.cpp	/^int BitString::size() const { $/
+CPPFLAGS	Makefile	/^CPPFLAGS=-ggdb3 -Wall -Werror -pedantic -std=gnu++/
+IllegalCopy	bitstring.cpp	7
+IllegalCopy::what	bitstring.cpp	/^  const char * what()const throw() {$/
+Mcompress.cpp	compress.cpp	/^int main(int argc, char ** argv) {$/
+NO_SYM	node.h	10
+Node	node.h	12
+Node	node.h	34
+Node::Node	node.h	/^  Node(unsigned s, int f): sym(s), freq(f), left(N/
+Node::Node	node.h	/^  Node(Node * l, Node * r): sym(NO_SYM), freq(l->f/
+Node::buildMap	node.cpp	/^void Node::buildMap(BitString b, std::map<unsigned/
+Node::freq	node.h	15
+Node::left	node.h	16
+Node::right	node.h	17
+Node::sym	node.h	14
+Node::~Node	node.h	/^  ~Node() {$/
+NodePtrCompare	node.h	30
+NodePtrCompare::operator()	node.h	/^  bool operator() (Node *const& x,Node*const& y) c/
+OBJS	Makefile	/^OBJS=$(patsubst %.cpp, %.o, $(SOURCES))$/
+SOURCES	Makefile	/^SOURCES=bitstring.cpp  buildTree.cpp  compress.cpp/
+__BIT_STRING_H__	bitstring.h	2
+__NODE_H__	node.h	2
+__READ_FREQ_H__	readFreq.h	2
+buildTree	buildTree.cpp	/^Node *  buildTree(uint64_t * counts) {$/
+clean	Makefile	/^clean:$/
+compress	Makefile	/^compress: $(OBJS)$/
+function	README	14
+printSym	readFreq.cpp	/^void printSym(std::ostream & s, unsigned sym) {$/
+priority_queue_t	node.h	34
+readFrequencies	readFreq.cpp	/^uint64_t * readFrequencies(const char * fname) {$/
+std::vector	node.h	34
+up	README	1
+writeCompressedOutput	compress.cpp	/^void writeCompressedOutput(const char* inFile,$/
+writeHeader	compress.cpp	/^void writeHeader(BitFileWriter * bfw, const std::m/
