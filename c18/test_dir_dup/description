@@ -1,0 +1,5 @@
+file 1 is duplicate of file 2
+file 3 is duplicate of file 4
+file 5 is unique
+
+After cleanup, only (file1/file2), (file3/file4), and file5 should be left.

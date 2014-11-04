@@ -1,0 +1,4 @@
+file 2 and file 3 are duplicates of file 1.
+file 4 is unique.
+
+After clean up, only (file1/file2/file3) and file4 should be left.

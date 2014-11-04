@@ -26,7 +26,7 @@ Node *  buildTree(uint64_t * counts) {
     
     // return the tree
     Node * ans = pq->top();
-    pq->top();
+    pq->pop();
     delete pq;
     return ans;
 }  

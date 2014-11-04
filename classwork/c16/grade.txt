@@ -6,36 +6,36 @@ This test was scored as correct (50)
 This problem appears correct
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
-The output you got does not match what was expected:
-Preorder: 3 1 -23 4 7 9 88 27 44 77			      |	Preorder: 3 1 -23 4 7 9 88 17 44 77
+This problem appears correct
 This test counts as 25% of the score for this problem
-This test was scored as incorrect (0)
-Percent this problem: 75 (= 30.0 / 40 points)
+This test was scored as correct (25)
+Percent this problem: 100 (= 40.0 / 40 points)
 ------------------------------------------
 
 
 Grading p2 (worth 25 points)
 -------------------------------------------------
+**Deleting executable file /home/ece551/svn/ece551-fall2014-asy13/classwork/c16/p2/test
 ***********************
 * Starting test 1     *
 ***********************
-Test case failed to produce the correct output!
-Differences (first 10 lines): 
-===============
-							      >	Step is in range!
-===============
-Percent this problem: 0 (= 0 / 25 points)
+The output matches the expected output.
+==23441== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23441== All heap blocks were freed -- no leaks are possible
+Valgrind reported no problems
+Percent this problem: 100 (= 25.0 / 25 points)
 ------------------------------------------
 
 
 Grading p3 (worth 20 points)
 -------------------------------------------------
+**Deleting executable file /home/ece551/svn/ece551-fall2014-asy13/classwork/c16/p3/test
 ***********************
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==10066== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==10066== All heap blocks were freed -- no leaks are possible
+==23472== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23472== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -43,8 +43,8 @@ This test was scored as correct (25)
 * Starting test 2     *
 ***********************
 The output matches the expected output.
-==10073== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==10073== All heap blocks were freed -- no leaks are possible
+==23479== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23479== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -52,8 +52,8 @@ This test was scored as correct (25)
 * Starting test 3     *
 ***********************
 The output matches the expected output.
-==10080== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==10080== All heap blocks were freed -- no leaks are possible
+==23486== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23486== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -61,8 +61,8 @@ This test was scored as correct (25)
 * Starting test 4     *
 ***********************
 The output matches the expected output.
-==10087== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==10087== All heap blocks were freed -- no leaks are possible
+==23493== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23493== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -72,12 +72,13 @@ Percent this problem: 100 (= 20.0 / 20 points)
 
 Grading p4 (worth 15 points)
 -------------------------------------------------
+**Deleting executable file /home/ece551/svn/ece551-fall2014-asy13/classwork/c16/p4/test
 ***********************
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==10119== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==10119== All heap blocks were freed -- no leaks are possible
+==23525== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23525== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -85,8 +86,8 @@ This test was scored as correct (25)
 * Starting test 2     *
 ***********************
 The output matches the expected output.
-==10126== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==10126== All heap blocks were freed -- no leaks are possible
+==23532== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23532== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -94,8 +95,8 @@ This test was scored as correct (25)
 * Starting test 3     *
 ***********************
 The output matches the expected output.
-==10133== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==10133== All heap blocks were freed -- no leaks are possible
+==23539== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23539== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -103,8 +104,8 @@ This test was scored as correct (25)
 * Starting test 4     *
 ***********************
 The output matches the expected output.
-==10140== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==10140== All heap blocks were freed -- no leaks are possible
+==23546== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==23546== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -113,4 +114,4 @@ Percent this problem: 100 (= 15.0 / 15 points)
 
 
 =============================================
-Overal score: 65.0
+Overal score: 100.0

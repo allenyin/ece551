@@ -18,8 +18,8 @@ Grading p3 (worth 20 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==6012== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==6012== All heap blocks were freed -- no leaks are possible
+==21851== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==21851== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -27,8 +27,8 @@ This test was scored as correct (25)
 * Starting test 2     *
 ***********************
 The output matches the expected output.
-==6019== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==6019== All heap blocks were freed -- no leaks are possible
+==21858== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==21858== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -36,8 +36,8 @@ This test was scored as correct (25)
 * Starting test 3     *
 ***********************
 The output matches the expected output.
-==6026== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==6026== All heap blocks were freed -- no leaks are possible
+==21865== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==21865== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -45,8 +45,8 @@ This test was scored as correct (25)
 * Starting test 4     *
 ***********************
 The output matches the expected output.
-==6033== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==6033== All heap blocks were freed -- no leaks are possible
+==21872== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==21872== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 25% of the score for this problem
 This test was scored as correct (25)
@@ -60,8 +60,8 @@ Grading p4 (worth 15 points)
 * Starting test 1     *
 ***********************
 The output matches the expected output.
-==6062== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==6062== All heap blocks were freed -- no leaks are possible
+==21901== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==21901== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)
@@ -69,8 +69,8 @@ This test was scored as correct (50)
 * Starting test 2     *
 ***********************
 The output matches the expected output.
-==6069== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-==6069== All heap blocks were freed -- no leaks are possible
+==21908== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==21908== All heap blocks were freed -- no leaks are possible
 Valgrind reported no problems
 This test counts as 50% of the score for this problem
 This test was scored as correct (50)

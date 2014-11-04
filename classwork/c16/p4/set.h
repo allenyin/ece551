@@ -2,8 +2,8 @@
 #define __SET_H__
 #include <stdexcept>
 
-template<typename K>
-class Set{
+template<typename T>
+class Map {
 public:
   virtual void add(const K & key) = 0;
   virtual bool contains(const K& key) const = 0;
