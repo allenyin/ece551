@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <stdio.h>
 
-void getdir(std::string dir, std::vector<std::string> &files) {
+void getdir(std::string dir, filemap * my_map, std::ofstream & ofs) {
     // directory pointer
     DIR *dp;    
     // dir entry pointer
@@ -22,12 +22,18 @@ void getdir(std::string dir, std::vector<std::string> &files) {
                 if(lstat((dir+entry->d_name).c_str(), &fileInfo) != -1) {
                     if(S_ISDIR(fileInfo.st_mode)) {
                         // entry is directory, recurse into it
-                        getdir(dir+entry->d_name, files);
-                        files.push_back(dir+entry->d_name); 
+                        getdir(dir+entry->d_name, my_map, ofs);
                     }
                     else if(S_ISREG(fileInfo.st_mode)) {
-                        // add if it's regular file
-                        files.push_back(dir+entry->d_name);
+                        // entry is regular file,
+                        // add to my_map if not duplicate
+                        std::string fname_in_map = is_duplicate(my_map, dir+entry->d_name);
+                        if (fname_in_map != "") {
+                            write_to_script(fname_in_map, dir+entry->d_name, ofs);
+                        }
+                        else {
+                            add_to_map(my_map, dir+entry->d_name);
+                        }
                     }
                 }
                 else {
@@ -60,6 +66,35 @@ const std::string getHash(std::string fname) {
     return digestSHA256.getHash();
 }
 
+// methods for operating on my hashmap
+void add_to_map(filemap * map, std::string fname) {
+    std::string hash_string = getHash(fname);
+    (*map)[hash_string] = fname;
+}
+
+std::string is_duplicate(filemap * map, std::string fname) {
+    // if fname is a duplicate of something already inside map
+    // return that item inside the map.
+    // otherwise, return NULL.
+    std::string hash_string = getHash(fname);
+    if (map->find(hash_string) == map->end()) {
+        // hash not in map, not duplicate
+        return "";
+    }
+    else {
+        // otherwise hash in map, return the results.
+        return (*map)[hash_string];
+    }
+}
+
+void write_to_script(std::string fname_in_map, std::string fname, std::ofstream & ofs) {
+    // file indicated by fname is a duplicate of an entry already in map
+    // write to ofs the appropriate shell commands to remove it.
+
+    ofs << "#Removing " << fname << " (duplicate of " << fname_in_map << ")\n";
+    ofs << "rm " << fname << std::endl;
+}
+
 int main(int argc, char* argv[]) {
     // Open the folder indicated by command line arguments (1 or more)
     // Find all regular files (recursively) contained within those directories.
@@ -70,15 +105,17 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
     else {
+        std::ofstream ofs("deduplicate.sh", std::ofstream::out);
+        ofs << "#!/bin/bash" << std::endl;
         // vector to hold all the files from all the directiories.
-        std::vector<std::string> files = std::vector<std::string>();
+        filemap * my_map = new filemap();
         for (int i=1; i<argc; i++) {
             std::string dir = argv[i];
-            getdir(dir,files);
-            for(unsigned j=0; j<files.size(); j++) {
-                std::cout << files[j] << ": " << getHash(files[j]) << "    SHA256\n";
-            }
+            getdir(dir, my_map, ofs);
         }
+        ofs.close();
+        delete my_map;
+        std::cout << "Finished generating shell script\n";
     }
 
     return EXIT_SUCCESS;

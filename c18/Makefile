@@ -10,4 +10,4 @@ hash: hash.cpp deduplicate.h
 	g++ $(CPPFLAGS) -o hash hash.cpp $(HASH_CPP)
 
 clean:
-	rm -f $(EXEC) *.o
+	rm -f $(EXEC) *.o deduplicate.sh

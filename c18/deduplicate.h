@@ -17,27 +17,13 @@
 #include "hash-library/md5.h"
 #include "hash-library/sha256.h"
 // unordered hash-map
-#include <unordered-map>
+#include <map>
 
 const std::string getHash(std::string fname);
 
-typedef std::unordered_map<std::string, std::string> filemap;
-// methods for operating on my hashmap
-void add_to_map(filemap map, std::string fname) {
-    std::string hash_string = getHash(fname);
-    filemap[hash_string] = fname;
-}
+typedef std::map<std::string, std::string> filemap;
+// methods to operate on filemap.
+void add_to_map(filemap * map, std::string fname);
+std::string is_duplicate(filemap * map, std::string fname);
+void write_to_script(std::string fname_in_map, std::string fname, std::ofstream & ofs);
 
-bool is_duplicate(filemap map, std::string fname) {
-    std::string hash_string = getHash(fname);
-    if (map.find(hash_string) == map.end()) {
-        // hash not in map, not duplicate
-        return false;
-    }
-    else {
-        // otherwise hash in map, compare actual filenames
-        return map[hash_string] == fname;
-    }
-}
-
-void generate_shell_script
