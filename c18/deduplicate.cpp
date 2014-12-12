@@ -48,6 +48,18 @@ void getdir(std::string dir, filemap * my_map, std::ofstream & ofs) {
     }
 }
 
+bool isSameFile(std::string fname1, std::string fname2) {
+    struct stat fileInfo1;
+    struct stat fileInfo2;
+    if (lstat(fname1.c_str(), &fileInfo1) != -1 && lstat(fname2.c_str(), &fileInfo2) != -1) {
+        // compare the inode
+        return (fileInfo1.st_ino == fileInfo2.st_ino);
+    }
+    else {
+        return false;
+    }
+}
+
 const std::string getHash(std::string fname) {
     // Make SHA256 Hash of the file given by fname.
     std::ifstream fs;
@@ -72,6 +84,7 @@ void add_to_map(filemap * map, std::string fname) {
     (*map)[hash_string] = fname;
 }
 
+
 std::string is_duplicate(filemap * map, std::string fname) {
     // if fname is a duplicate of something already inside map
     // return that item inside the map.
@@ -82,8 +95,12 @@ std::string is_duplicate(filemap * map, std::string fname) {
         return "";
     }
     else {
-        // otherwise hash in map, return the results.
-        return (*map)[hash_string];
+        // otherwise hash in map
+        if (!isSameFile((*map)[hash_string], fname)) {
+            return (*map)[hash_string];
+        }
+        //std::cout << "Comparing against self!\n";
+        return "";
     }
 }
 

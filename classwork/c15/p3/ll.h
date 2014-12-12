@@ -161,33 +161,6 @@ class LinkedList {
             return *this;
         }
         
-        /*
-        void addFront(const T &item) {
-            Node * temp = head;
-            head = new Node(item, temp, NULL);
-            if (temp != NULL) {
-                temp->prev = head;
-            }
-            size++;
-            if (size==1) {
-                tail = head;
-            }
-        }
-
-        void addBack(const T &item) {
-            Node * temp = tail;
-            tail = new Node(item, NULL, temp);
-            if (temp != NULL) {
-                temp->next = tail;
-            }
-            ++size;
-            //std::cout << "size increased here!\n";
-            if (size==1) {
-                head = tail;
-            }
-        }
-        */
-
         void addFront(const T& item) {
             Node *temp = new Node(item, NULL, NULL);
             if (head == NULL) {
@@ -358,14 +331,6 @@ class LinkedList {
                     // remove item if f returns true
                     Node * temp = curr->next;
                     remove(curr->data);
-                    /*
-                    temp->next = curr->next;
-                    if (curr->next != NULL) {
-                        temp->next = curr->next;
-                    }
-                    delete curr;
-                    size--;
-                    */
                     curr = temp;
                 }
                 else {
@@ -373,46 +338,6 @@ class LinkedList {
                 }
             }
         }
-
-        
-        //std::vector<LinkedList<T> > split(Function<unsigned, const T&> *f) const {
-            /* Splits the elements of the LinkedList into multiple LinkedLists,
-             * determined by the return value of f.
-             * 
-             * The vector has length equal to the possible return values of f,
-             * the return value of f determines which  index of the return vector 
-             * an item is put into.
-             */
-        /*    std::vector<unsigned> item_idx;
-            // first pass to find what index each elements go
-            Node * curr = head;
-            while (curr != NULL) {
-                item_idx.push_back(f->invoke(curr->data));
-                curr = curr->next;
-            }
-
-            // find max number of bins we need:
-            unsigned max = 0;
-            std::vector<unsigned>::iterator it = item_idx.begin();
-            while (it != item_idx.end()) {
-                if (*it>max) {
-                    max = *it;
-                }
-                ++it;
-            }
-
-            // second pass to get the right ans to return
-            std::vector< LinkedList<T> > ans(max+1);
-            curr = head;
-            it = item_idx.begin();
-            while (curr != NULL) {
-                ans[*it].addBack(curr->data);
-                curr = curr->next;
-                ++it;
-            }
-            // everything is local variable, no need to free anything.
-            return ans;
-        }*/
 
         std::vector<LinkedList<T> > split(Function<unsigned, const T&> *f) const {
             /* Splits the elements of the LinkedList into multiple LinkedLists,
